@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Pro App</title>
+    <title>𝗦𝗠𝗔𝗥𝗧 𝗘𝗢 𝗘𝗔𝗥𝗡 </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +173,7 @@
             <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
                 <i class="fas fa-bars header-icon"></i>
             </button>
-            <span class="brand">SmartEoEarn</span>
+            <span class="brand">𝗦𝗠𝗔𝗥𝗧 𝗘𝗢 𝗘𝗔𝗥𝗡 </span>
             <a href="#" class="text-secondary fs-4 header-icon"><i class="fas fa-bell"></i></a>
         </header>
 
@@ -219,7 +219,7 @@
                 </div>
                 <div class="card-style">
                     <h4 class="fw-bold mb-3">Withdraw Funds</h4>
-                    <p class="text-muted small mb-3">Minimum withdrawal amount is ৳100. Verification is required.</p>
+                    <p class="text-muted small mb-3">Minimum withdrawal amount is ৳200. Verification is required.</p>
                     <form id="withdraw-form">
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Method</label>
@@ -231,11 +231,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Account Number</label>
-                            <input type="text" class="form-control" id="withdraw-number" placeholder="e.g., 017..." required>
+                            <input type="text" class="form-control" id="withdraw-number" placeholder="017..." required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Amount (BDT)</label>
-                            <input type="number" class="form-control" id="withdraw-amount" placeholder="Enter amount" min="100" required>
+                            <input type="number" class="form-control" id="withdraw-amount" placeholder="Enter amount" min="200" required>
                         </div>
                         <button type="submit" class="btn btn-main w-100 mt-2">Request Withdrawal</button>
                     </form>
@@ -294,335 +294,4 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="onboarding-title">Welcome to Our App!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-0">
-                    <img src="https://via.placeholder.com/400x200" id="onboarding-image" class="img-fluid w-100">
-                    <div class="p-3">
-                        <p id="onboarding-description">Here is a quick guide to get you started. Watch this video for more details.</p>
-                        <a href="#" id="onboarding-link" target="_blank" class="btn btn-main w-100">Watch Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Account Verification Modal -->
-    <div class="modal fade" id="verifyModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-2">
-                <div class="modal-header">
-                    <h5 class="modal-title fw-bold">Account Verification</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-center text-muted">Select a payment method to verify.</p>
-                    <div class="payment-methods">
-                        <div class="payment-method active" data-method="bKash" data-number="01581873691">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkKKsXWiTrlalq7iNuMhMlhGUSIZT9cT990bhAIXrVcAiOa3NfPp-A2Cs&s=10" alt="bKash">
-                        </div>
-                        <div class="payment-method" data-method="Nagad" data-number="01825367169">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh04X5HmmUCkgNj-e1W24YPBnPt32L3VZhQ&s" alt="Nagad">
-                        </div>
-                        <div class="payment-method" data-method="Rocket" data-number="01581873691">
-                           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5BVg_02gxZOZJIQViCSYpr5xgvGXOhDD11w&s" alt="Rocket">
-                        </div>
-                    </div>
-                    <div id="payment-info" class="mb-3">
-                        <p class="mb-1 small">Send <strong>৳50</strong> to this <strong id="payment-method-name">bKash</strong> number:</p>
-                        <span id="payment-number">01XXXXXXXXX</span>
-                        <button class="btn btn-sm btn-outline-primary" id="copy-payment-number"><i class="fas fa-copy"></i></button>
-                    </div>
-                    <form id="verify-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="transaction-id" placeholder="Enter Transaction ID" required>
-                        </div>
-                        <button type="submit" class="btn btn-main w-100">Submit for Verification</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Side Menu (Offcanvas) -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Contact Us</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <div class="contact-list">
-                <a href="https://t.me/your_telegram" target="_blank"><i class="fab fa-telegram-plane text-info"></i> Telegram</a>
-                <a href="https://wa.me/your_whatsapp_number" target="_blank"><i class="fab fa-whatsapp text-success"></i> WhatsApp</a>
-                <a href="https://facebook.com/your_page" target="_blank"><i class="fab fa-facebook text-primary"></i> Facebook</a>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-        import { getDatabase, ref, set, get, onValue, update, push, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
-        // --- Firebase Config (use your own) ---
-        const firebaseConfig = { apiKey: "AIzaSyAb8YsPMOY53GxiycCL6G0MPZdgWe3nnyY", authDomain: "movie-92659.firebaseapp.com", databaseURL: "https://movie-92659-default-rtdb.firebaseio.com", projectId: "movie-92659", storageBucket: "movie-92659.firebasestorage.app", messagingSenderId: "1090734362509", appId: "1:1090734362509:web:86be5583f6e8fcfdfa77c4", measurementId: "G-XF1TEP0DSJ" };
-        
-        // --- App Initialization ---
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getDatabase(app);
-        let currentUserData = null;
-        let onboardingModal = null;
-
-        // --- DOM Elements ---
-        const loader = document.getElementById('global-loader');
-        const authContainer = document.getElementById('auth-container');
-        const appContainer = document.getElementById('app-container');
-
-        // --- Utility Functions ---
-        const showToast = (message, type = 'success') => {
-            const toast = document.getElementById('toast-notification');
-            toast.textContent = message;
-            toast.className = `toast-notification ${type} show`;
-            setTimeout(() => toast.classList.remove('show'), 3000);
-        };
-
-        const showView = (viewId) => {
-            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-            document.getElementById(viewId)?.classList.add('active');
-            document.querySelectorAll('.bottom-nav-link').forEach(l => {
-                l.classList.toggle('active', l.dataset.view === viewId);
-            });
-            window.scrollTo(0, 0); // Scroll to top on view change
-        };
-
-        // --- Authentication Logic ---
-        onAuthStateChanged(auth, user => {
-            if (user) {
-                const userRef = ref(db, 'users/' + user.uid);
-                onValue(userRef, (snapshot) => {
-                    if (snapshot.exists()) {
-                        currentUserData = { uid: user.uid, ...snapshot.val() };
-                        updateUI(currentUserData);
-                        checkOnboarding();
-                    }
-                    authContainer.style.display = 'none';
-                    appContainer.style.display = 'block';
-                    if (!document.querySelector('.view.active')) {
-                        showView('home-view');
-                    }
-                    loader.style.opacity = '0';
-                    setTimeout(() => loader.style.display = 'none', 300);
-                });
-                loadHomeContent();
-            } else {
-                currentUserData = null;
-                authContainer.style.display = 'flex';
-                appContainer.style.display = 'none';
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 300);
-            }
-        });
-
-        document.getElementById('signup-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const name = document.getElementById('signup-name').value;
-            const email = document.getElementById('signup-email').value;
-            const password = document.getElementById('signup-password').value;
-            try {
-                const cred = await createUserWithEmailAndPassword(auth, email, password);
-                const code = name.split(' ')[0].toUpperCase() + Math.random().toString(36).substr(2, 4).toUpperCase();
-                await set(ref(db, 'users/' + cred.user.uid), { name, email, balance: 0, isVerified: false, referralCode: code, createdAt: serverTimestamp() });
-                await set(ref(db, `referralCodes/${code}`), { userId: cred.user.uid });
-                localStorage.setItem('onboardingShown', 'false'); // Show onboarding for new users
-            } catch (error) { showToast(error.message, 'error'); }
-        });
-
-        document.getElementById('login-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            signInWithEmailAndPassword(auth, document.getElementById('login-email').value, document.getElementById('login-password').value)
-            .catch(error => showToast(error.message, 'error'));
-        });
-
-        document.getElementById('logout-btn').addEventListener('click', () => signOut(auth).then(() => showToast('Logged out successfully.')));
-        document.getElementById('show-signup').addEventListener('click', e => { e.preventDefault(); document.getElementById('login-view').style.display = 'none'; document.getElementById('signup-view').style.display = 'block'; });
-        document.getElementById('show-login').addEventListener('click', e => { e.preventDefault(); document.getElementById('signup-view').style.display = 'none'; document.getElementById('login-view').style.display = 'block'; });
-
-        // --- UI Update Function ---
-        function updateUI(data) {
-            const balance = `৳${(data.balance || 0).toFixed(2)}`;
-            const referralCode = data.referralCode || 'N/A';
-
-            // Profile View
-            document.getElementById('profile-name-display').textContent = data.name;
-            document.getElementById('profile-email-display').textContent = data.email;
-            document.getElementById('user-balance').textContent = balance;
-            document.getElementById('profile-referral-code-display').value = referralCode;
-            const joinDate = data.createdAt ? new Date(data.createdAt).toLocaleDateString() : 'N/A';
-            document.getElementById('user-join-date').textContent = joinDate;
-
-            // Wallet View
-            document.getElementById('wallet-balance-amount').textContent = balance;
-
-            const statusBadge = document.getElementById('verification-status-badge');
-            if (data.isVerified) {
-                statusBadge.textContent = 'Verified';
-                statusBadge.className = 'verification-status verified';
-            } else {
-                statusBadge.textContent = 'Not Verified';
-                statusBadge.className = 'verification-status not-verified';
-            }
-
-            // Referral View
-            document.getElementById('user-referral-code').value = referralCode;
-            const referralSection = document.getElementById('referral-section');
-            const walletView = document.getElementById('wallet-view');
-            
-            if (data.isVerified) {
-                referralSection.classList.remove('feature-locked');
-                walletView.classList.remove('feature-locked');
-            } else {
-                referralSection.classList.add('feature-locked');
-                walletView.classList.add('feature-locked');
-            }
-        }
-        
-        // --- Onboarding Popup Logic ---
-        function checkOnboarding() {
-            if (localStorage.getItem('onboardingShown') !== 'true') {
-                onValue(ref(db, 'onboardingPopup'), (snapshot) => {
-                    if (snapshot.exists()) {
-                        const data = snapshot.val();
-                        document.getElementById('onboarding-title').textContent = data.title;
-                        document.getElementById('onboarding-image').src = data.imageUrl;
-                        document.getElementById('onboarding-description').textContent = data.description;
-                        document.getElementById('onboarding-link').href = data.videoUrl;
-                        if (!onboardingModal) onboardingModal = new bootstrap.Modal(document.getElementById('onboardingModal'));
-                        onboardingModal.show();
-                        document.getElementById('onboardingModal').addEventListener('hidden.bs.modal', () => {
-                            localStorage.setItem('onboardingShown', 'true');
-                        }, { once: true });
-                    }
-                }, { once: true });
-            }
-        }
-
-        // --- Content Loading ---
-        function loadHomeContent() {
-            onValue(ref(db, 'homeSlider'), (snapshot) => {
-                const container = document.getElementById('slider-items-container');
-                container.innerHTML = '';
-                if(snapshot.exists()) {
-                    let first = true;
-                    snapshot.forEach(child => {
-                        const item = child.val();
-                        container.innerHTML += `<div class="carousel-item ${first ? 'active' : ''}"><img src="${item.imageUrl}" class="d-block w-100" alt="..."><div class="carousel-caption d-none d-md-block"><h5>${item.title}</h5></div></div>`;
-                        first = false;
-                    });
-                }
-            });
-            onValue(ref(db, 'services'), (snapshot) => {
-                const container = document.getElementById('services-container');
-                container.innerHTML = '';
-                if(snapshot.exists()) {
-                    snapshot.forEach(child => {
-                        const item = child.val();
-                        container.innerHTML += `<div class="col-6"><div class="service-card"><i class="${item.icon} icon"></i><h5>${item.title}</h5><p>${item.description}</p></div></div>`;
-                    });
-                }
-            });
-        }
-        
-        // --- Event Listeners ---
-        document.querySelectorAll('.bottom-nav-link').forEach(link => {
-            link.addEventListener('click', (e) => { e.preventDefault(); showView(link.dataset.view); });
-        });
-        
-        // Go to wallet button on profile
-        document.getElementById('go-to-wallet-btn').addEventListener('click', () => {
-             showView('wallet-view');
-        });
-
-        // Add event listener to locked features to show verify modal
-        document.addEventListener('click', function(e) {
-            if (e.target.matches('.feature-locked') || e.target.closest('.feature-locked')) {
-                if (!currentUserData.isVerified) {
-                    const verifyModal = new bootstrap.Modal(document.getElementById('verifyModal'));
-                    verifyModal.show();
-                }
-            }
-        });
-
-        document.querySelectorAll('.payment-method').forEach(method => {
-            method.addEventListener('click', () => {
-                document.querySelector('.payment-method.active').classList.remove('active');
-                method.classList.add('active');
-                document.getElementById('payment-method-name').textContent = method.dataset.method;
-                document.getElementById('payment-number').textContent = method.dataset.number;
-            });
-        });
-
-        document.getElementById('copy-payment-number').addEventListener('click', () => {
-            navigator.clipboard.writeText(document.getElementById('payment-number').textContent).then(() => showToast('Number copied!'));
-        });
-
-        document.getElementById('verify-form').addEventListener('submit', async e => {
-            e.preventDefault();
-            const trxId = document.getElementById('transaction-id').value;
-            const selectedMethod = document.querySelector('.payment-method.active').dataset.method;
-            if (!trxId) { showToast('Please enter the Transaction ID.', 'error'); return; }
-            try {
-                await push(ref(db, 'verificationRequests'), { userId: currentUserData.uid, userName: currentUserData.name, transactionId: trxId, method: selectedMethod, status: 'pending', timestamp: serverTimestamp() });
-                showToast('Verification request submitted successfully!');
-                bootstrap.Modal.getInstance(document.getElementById('verifyModal')).hide();
-                e.target.reset();
-            } catch (error) { showToast(error.message, 'error'); }
-        });
-
-        document.getElementById('copy-referral-btn').addEventListener('click', () => { 
-            navigator.clipboard.writeText(document.getElementById('user-referral-code').value).then(() => showToast('Referral code copied!')); 
-        });
-        document.getElementById('copy-profile-referral-btn').addEventListener('click', () => { 
-            navigator.clipboard.writeText(document.getElementById('profile-referral-code-display').value).then(() => showToast('Referral code copied!')); 
-        });
-        
-        document.getElementById('referral-submit-form').addEventListener('submit', async e => {
-            e.preventDefault();
-            if (!currentUserData.isVerified) { showToast('Please verify your account to use a referral code.', 'error'); return; }
-            if (currentUserData.referredBy) { showToast('You have already used a referral code.', 'error'); return; }
-            const code = document.getElementById('referral-code-input').value.trim().toUpperCase();
-            if (!code) { showToast('Please enter a referral code.', 'error'); return; }
-            if (code === currentUserData.referralCode) { showToast("You can't use your own referral code.", 'error'); return; }
-            const snapshot = await get(ref(db, `referralCodes/${code}`));
-            if (snapshot.exists()) {
-                const referrerId = snapshot.val().userId;
-                if (referrerId === currentUserData.uid) { showToast("You can't use your own referral code.", 'error'); return; }
-                try {
-                    await runTransaction(ref(db, `users/${currentUserData.uid}`), (d) => { if (d && !d.referredBy) { d.balance = (d.balance || 0) + 2; d.referredBy = referrerId; } return d; });
-                    await runTransaction(ref(db, `users/${referrerId}`), (d) => { if (d) { d.balance = (d.balance || 0) + 50; } return d; });
-                    showToast('Success! You received a ৳2 bonus!');
-                    e.target.reset();
-                } catch (error) { showToast(error.message, 'error'); }
-            } else { showToast('Invalid referral code. Please check and try again.', 'error'); }
-        });
-
-        document.getElementById('withdraw-form').addEventListener('submit', async e => {
-            e.preventDefault();
-            if (!currentUserData.isVerified) { showToast('Please verify your account to withdraw funds.', 'error'); return; }
-            const amount = parseFloat(document.getElementById('withdraw-amount').value);
-            if (amount < 100) { showToast('Minimum withdrawal amount is ৳100.', 'error'); return; }
-            if (amount > currentUserData.balance) { showToast('Insufficient balance for this withdrawal.', 'error'); return; }
-            try {
-                const newBalance = currentUserData.balance - amount;
-                await update(ref(db, `users/${currentUserData.uid}`), { balance: newBalance });
-                await push(ref(db, 'withdrawalRequests'), { userId: currentUserData.uid, userName: currentUserData.name, amount: amount, method: document.getElementById('withdraw-method').value, accountNumber: document.getElementById('withdraw-number').value, status: 'pending', timestamp: serverTimestamp() });
-                showToast('Withdrawal request submitted successfully!');
-                e.target.reset();
-            } catch (error) { showToast(error.message, 'error'); }
-        });
-    </script>
-</body>
-</html>
+   
